@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  height: 68px;
+}
+
+.nav-link {
+  margin-left: 50px;
+  color: #FF6060;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
