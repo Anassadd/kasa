@@ -1,10 +1,13 @@
-import logoWhite from '.../src/assets/logo-kasa-white.jpg'; // À importer
+import logo from '../assets/logo-kasa-white.jpg' // Ajoute un logo blanc pour le footer
+import "../styles/Footer.css"
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="footer">
-      <img src={logoWhite} alt="Kasa" className="footer-logo" />
+      <img src={logo} alt="Kasa" />
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
-  );
+  )
 }
+
+export default Footer

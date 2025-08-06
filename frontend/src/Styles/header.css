@@ -2,22 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
-  max-width: 1240px;
-  margin: 0 auto;
+  padding: 40px 100px 20px;
 }
 
-.header-logo {
+.header img {
   height: 68px;
 }
 
-.nav-link {
-  margin-left: 50px;
-  color: #FF6060;
-  text-decoration: none;
-  font-size: 24px;
+.nav {
+  display: flex;
+  gap: 30px;
 }
 
-.nav-link.active {
+.nav a {
+  text-decoration: none;
+  color: #FF6060;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav a.active {
   text-decoration: underline;
 }
