@@ -1,17 +1,28 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Error from './pages/Error';
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer"; // 👈 importe Footer
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+//import Logement from "./pages/Logement.jsx"; // 👈 importe la page Logement
+import Dropdown from "./components/Dropdown.jsx";
+import ErrorPage from "./pages/Error.jsx";
+
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route 
+          path="/logement/:id" 
+          element={<div style={{padding: '20px', color: 'green'}}>Test réussi ! La route fonctionne.</div>} 
+        />
+        <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      <Footer /> {/* 👈 Footer après toutes les routes */}
+    </>
   );
 }
 

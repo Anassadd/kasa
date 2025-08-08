@@ -1,4 +1,4 @@
-import logo from '../assets/logo-kasa-white.jpg' // Ajoute un logo blanc pour le footer
+import logo from '../assets/logo-kasa-white.png' // Ajoute un logo blanc pour le footer
 import "../styles/Footer.css"
 
 function Footer() {

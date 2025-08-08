@@ -1,5 +1,3 @@
-import '../styles/banner.css';
-
 function Banner({ image, text }) {
   return (
     <div className="banner" style={{ backgroundImage: `url(${image})` }}>

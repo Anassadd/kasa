@@ -1,16 +1,48 @@
-import Header from '../components/Header';
-import Banner from '../components/Banner'
-import Gallery from '../components/Gallery'
-import bannerHome from '../assets/banner-home.jpg' // Ajoute l'image dans ton dossier /assets
-import Footer from '../components/Footer';
+import { useState, useEffect } from 'react'; 
+import bannerImage from "../assets/banner-home.jpg";
+import Card from "../components/Card"; // ✅ IMPORT DU COMPOSANT
+import "../styles/home.css";
+import Footer from "../components/Footer";
 
-function Home() {
+
+const Home = () => {
+  const [logements, setLogements] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/properties")
+      .then((response) => response.json())
+      .then((data) => setLogements(data))
+      .catch((error) =>
+        console.error("Erreur lors de la récupération des logements :", error)
+      );
+  }, []);
+
   return (
-    <main>
-      <Banner image={bannerHome} text="Chez vous, partout et ailleurs" />
-      <Gallery />
-    </main>
-  )
-}
+    <div className="home-container">
+      {/* Section bannière */}
+      <div
+        className="banner"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      >
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
 
-export default Home
+      {/* Liste des logements */}
+      <section className="location-grid">
+        {logements.map((logement) => (
+          <Card
+            key={logement.id}
+            id={logement.id}
+            title={logement.title}
+            cover={logement.cover}
+          />
+        ))}
+      </section>
+  
+
+    </div>
+  );
+};
+
+export default Home;
+

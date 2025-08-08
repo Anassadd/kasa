@@ -1,12 +1,20 @@
-import '../styles/card.css'
+// src/components/Card.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/card.css"; // ← Lien vers le CSS
 
-function Card({ title, cover }) {
+const Card = ({ id, title, cover }) => {
   return (
-    <article className="card">
-      <img src={cover} alt={title} />
-      <h2>{title}</h2>
-    </article>
-  )
-}
+    <Link to={`/logement/${id}`} className="card">
+      <div
+        className="card-background"
+        style={{ backgroundImage: `url(${cover})` }}
+      >
+        <div className="card-overlay"></div>
+        <h2 className="card-title">{title}</h2>
+      </div>
+    </Link>
+  );
+};
 
-export default Card
+export default Card;

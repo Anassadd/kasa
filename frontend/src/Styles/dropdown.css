@@ -1,0 +1,50 @@
+/* src/styles/Dropdown.css */
+
+.dropdown {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  background-color: #f6f6f6;
+  padding: 15px;
+  color: #333;
+  animation: open 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.down {
+  transform: rotate(0deg);
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: scaleY(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
