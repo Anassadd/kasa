@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; 
 import bannerImage from "../assets/banner-home.jpg";
 import Card from "../components/Card"; // ✅ IMPORT DU COMPOSANT
-import "../styles/home.css";
+import "./home.css";
 import Footer from "../components/Footer";
 
 

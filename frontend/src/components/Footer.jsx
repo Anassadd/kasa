@@ -1,5 +1,5 @@
 import logo from '../assets/logo-kasa-white.png' // Ajoute un logo blanc pour le footer
-import "../styles/Footer.css"
+import "./Footer.css"
 
 function Footer() {
   return (

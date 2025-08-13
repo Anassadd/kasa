@@ -1,0 +1,33 @@
+.navbar {
+  padding: 10px 0px 10px;
+  display: flex;
+  width: 1240px;
+  height: 68px;
+  justify-content: center;
+  align-items: center;
+  gap: 613.678px;
+}
+
+.navbar-logo img {
+  height: 68px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px; /* espace entre les liens */
+}
+
+.navbar-link {
+  color: #000;
+  text-align: right;
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 34.224px */
+}
+
+.navbar-link.active {
+  text-decoration: underline;
+}
+

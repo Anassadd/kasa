@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer"; // 👈 importe Footer
+import Navbar from "./components/navbar.jsx";
+import Footer from "./components/Footer"; 
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 //import Logement from "./pages/Logement.jsx"; // 👈 importe la page Logement
@@ -21,7 +21,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
         </Routes>
-      <Footer /> {/* 👈 Footer après toutes les routes */}
+      <Footer /> 
     </>
   );
 }

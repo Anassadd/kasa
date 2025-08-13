@@ -1,7 +1,7 @@
 // src/components/Card.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/card.css"; // ← Lien vers le CSS
+import "./card.css"; // ← Lien vers le CSS
 
 const Card = ({ id, title, cover }) => {
   return (

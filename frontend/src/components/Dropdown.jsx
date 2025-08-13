@@ -1,6 +1,6 @@
 // src/components/Dropdown.jsx
 import { useState } from 'react';
-import '../styles/dropdown.css';
+import './dropdown.css';
 
 function Dropdown({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,8 +1,8 @@
 // src/pages/About.jsx
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
-import bannerAbout from '../assets/banner-about.png'; // ajoute cette image dans /assets
-import '../styles/About.css';
+import bannerAbout from '../assets/banner-about.png';
+import './About.css';
 
 function About() {
   return (
