@@ -1,4 +1,3 @@
-
 function Banner({ image, text }) {
   return (
     <div className="banner" style={{ backgroundImage: `url(${image})` }}>
@@ -8,4 +7,3 @@ function Banner({ image, text }) {
 }
 
 export default Banner;
-

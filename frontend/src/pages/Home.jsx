@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import bannerImage from "../assets/banner-home.jpg";
 import Card from "../components/Card"; // ✅ IMPORT DU COMPOSANT
 import "./home.css";
-import Footer from "../components/Footer";
+import Banner from '../components/Banner';
 
 
 const Home = () => {
@@ -19,13 +19,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Section bannière */}
-      <div
-        className="banner"
-        style={{ backgroundImage: `url(${bannerImage})` }}
-      >
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+    <Banner image={bannerImage} text="Chez vous, partout et ailleurs"/>
 
       {/* Liste des logements */}
       <section className="location-grid">

@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
 import bannerAbout from '../assets/banner-about.png';
