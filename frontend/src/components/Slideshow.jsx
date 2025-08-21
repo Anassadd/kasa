@@ -1,56 +1,46 @@
 import React, { useState } from "react";
 import "./Slideshow.css";
-import arrow from "../assets/arrow.png"; // Une seule flèche
+import arrow from "../assets/arrow.png"; // ta flèche unique
 
-function Slideshow({ pictures }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Slideshow = ({ pictures }) => {
+  const [current, setCurrent] = useState(0);
   const total = pictures.length;
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
+  const nextSlide = () => {
+    setCurrent(current === total - 1 ? 0 : current + 1);
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+  const prevSlide = () => {
+    setCurrent(current === 0 ? total - 1 : current - 1);
   };
 
   return (
     <div className="slideshow">
+      {total > 1 && (
+        <>
+          <img
+            src={arrow}
+            alt="Précédent"
+            className="arrow arrow-left"
+            onClick={prevSlide}
+          />
+          <img
+            src={arrow}
+            alt="Suivant"
+            className="arrow arrow-right"
+            onClick={nextSlide}
+          />
+          <span className="counter">{`${current + 1} / ${total}`}</span>
+        </>
+      )}
       <img
-        src={pictures[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
+        src={pictures[current]}
+        alt={`slide ${current + 1}`}
         className="slide-image"
       />
-
-      {/* Flèche gauche */}
-      {total > 1 && (
-        <img
-          src={arrow}
-          alt="Précédent"
-          className="arrow arrow-left"
-          onClick={prevSlide}
-        />
-      )}
-
-      {/* Flèche droite (rotation dans le CSS) */}
-      {total > 1 && (
-        <img
-          src={arrow}
-          alt="Suivant"
-          className="arrow arrow-right"
-          onClick={nextSlide}
-        />
-      )}
-
-      {/* Compteur */}
-      {total > 1 && (
-        <div className="counter">
-          {currentIndex + 1} / {total}
-        </div>
-      )}
     </div>
   );
-}
+};
 
 export default Slideshow;
 
