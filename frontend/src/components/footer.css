@@ -25,11 +25,12 @@
   
   @media (max-width: 767px) {
     .footer {
-      width: 100vw; /* prend toute la largeur de l'écran */
+      width: auto; 
+      height: 209px;
       padding: 30px 20px 20px;
       margin-top: 30px;
-      border-radius: 0; /* on enlève les coins arrondis */
-      box-sizing: border-box; /* évite que le padding déborde */
+      border-radius: 0; 
+      box-sizing: border-box; 
     }
   
     .footer-logo {

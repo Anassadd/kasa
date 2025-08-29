@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'; 
-import bannerImage from "../assets/banner-home.jpg";
-import Card from "../components/Card"; // ✅ IMPORT DU COMPOSANT
+import { useState, useEffect } from "react";
+import Banner from "../components/Banner";
+import Card from "../components/Card";
+import bannerHome from "../assets/banner-home.jpg"; 
 import "./home.css";
-import Banner from '../components/Banner';
-
 
 const Home = () => {
   const [logements, setLogements] = useState([]);
@@ -19,10 +18,9 @@ const Home = () => {
 
   return (
     <div className="home-container">
-    <Banner image={bannerImage} text="Chez vous, partout et ailleurs"/>
+      <Banner image={bannerHome} title="Chez vous, partout et ailleurs" className="home-banner" />
 
-      {/* Liste des logements */}
-      <section className="location-grid">
+      <section className="logement-list">
         {logements.map((logement) => (
           <Card
             key={logement.id}
@@ -32,11 +30,10 @@ const Home = () => {
           />
         ))}
       </section>
-  
-
     </div>
   );
 };
 
 export default Home;
+
 

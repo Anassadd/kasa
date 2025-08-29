@@ -47,3 +47,23 @@
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0,0,0,.6);
 }
+
+@media (max-width: 767px) {
+.arrow-right {
+    right: 16px;
+    transform: translateY(-50%) rotate(90deg);
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-left {
+  left: 16px;
+  transform: translateY(-50%) rotate(-90deg); 
+  width: 20px;
+  height: 20px;
+}
+
+.counter {
+  display: none;
+}
+}

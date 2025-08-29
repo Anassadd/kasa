@@ -16,13 +16,12 @@ function Dropdown({ title, content }) {
         />
       </div>
 
-      {isOpen && (
-        <div className="dropdown-content">
-          {content}
-        </div>
-      )}
+      <div className={`dropdown-content ${isOpen ? "" : "closed"}`}>
+        {content}
+      </div>
     </div>
   );
 }
 
 export default Dropdown;
+

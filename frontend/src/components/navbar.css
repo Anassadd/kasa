@@ -1,11 +1,10 @@
 .navbar {
-  padding: 10px 0px 10px;
+  padding: 10px 20px;
   display: flex;
-  width: 1240px;
-  height: 68px;
-  justify-content: center;
+  justify-content: space-between; /* logo à gauche, liens à droite */
   align-items: center;
-  gap: 613.678px;
+  max-width: 1240px;
+  margin: 0 auto; /* centrer la navbar */
 }
 
 .navbar-logo img {
@@ -14,20 +13,37 @@
 
 .navbar-links {
   display: flex;
-  gap: 30px; /* espace entre les liens */
+  gap: 30px;
 }
 
 .navbar-link {
   color: #000;
-  text-align: right;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 142.6%; /* 34.224px */
+  text-decoration: none;
 }
 
 .navbar-link.active {
   text-decoration: underline;
 }
 
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 17px 21px 1px 21px;
+  }
+
+  .navbar-logo img {
+    height: 40px; /* logo plus petit */
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .navbar-link {
+    font-size: 12px;
+    text-transform: uppercase; /* style mobile */
+  }
+}

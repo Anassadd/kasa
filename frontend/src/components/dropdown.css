@@ -15,6 +15,7 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
+  border-radius: 5px;
 }
 
 .dropdown-header h2 {
@@ -30,6 +31,15 @@
   font-size: 16px;
   line-height: 1.5;
   border-radius: 0 0 10px 10px;
+  max-height: 500px; /* limite quand ouvert */
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.dropdown-content.closed {
+  max-height: 0;
+  padding: 0 20px; /* garder un peu de padding horizontal */
+  overflow: hidden;
 }
 
 .dropdown-arrow {
@@ -41,3 +51,4 @@
 .dropdown-arrow.up {
   transform: rotate(180deg);
 }
+

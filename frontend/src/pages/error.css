@@ -1,4 +1,3 @@
-/* Error Page Styles */
 .error-wrapper {
   display: flex;
   flex-direction: column;
@@ -37,7 +36,6 @@
   color: #FF6060;
   margin: 0;
   text-align: center;
-  font-family: "Montserrat";
 }
 
 .error-link {
@@ -52,22 +50,37 @@
   opacity: 0.8;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
+/* Version mobile */
+@media (max-width: 768px) {
+  .error-container {
+    padding: 0 20px;
+    justify-content: flex-start;
+    margin-top: 100px; 
+  }
+  
   .error-content {
-    gap: 139px;
-    margin: 100px 0;
+    gap: 113px; 
+    margin: 0;
   }
   
   .error-code {
-    font-size: 288px;
+    font-size: 96px; 
+    margin-bottom: 0;
   }
   
   .error-message {
-    font-size: 36px;
+    font-size: 18px;
+    width: 100%;
+    line-height: 1.3;
+    margin: 10px 0 80px 0; 
+    font-weight: 500;
   }
   
   .error-link {
-    font-size: 18px;
+    font-size: 14px;
+    margin-top: 0;
+    text-decoration: underline;
+    color: #000000;
   }
 }
+

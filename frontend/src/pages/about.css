@@ -1,4 +1,10 @@
-
+.about-banner {
+  max-width: 1200px;
+  margin: 40px auto;
+  height: 223px;
+  border-radius: 25px;
+  overflow: hidden;
+}
 
 .about-dropdowns {
   max-width: 1024px;
@@ -6,4 +12,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .about-banner {
+    width: calc(100% - 40px); 
+    margin: 20px auto;
+    border-radius: 10px;
+    height: 111px;
+  }
+
+  .about-dropdowns {
+    width: calc(100% - 40px); /* largeur totale - 40px */
+    margin: 10px auto;
+  }
 }
