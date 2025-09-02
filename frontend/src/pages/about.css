@@ -26,5 +26,6 @@
   .about-dropdowns {
     width: calc(100% - 40px); /* largeur totale - 40px */
     margin: 10px auto;
+    gap: 0px;
   }
 }

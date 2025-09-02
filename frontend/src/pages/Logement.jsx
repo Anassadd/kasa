@@ -83,10 +83,10 @@ function Logement() {
         <Dropdown
           title="Équipements"
           content={
-            <ul>
-              {logement.equipments.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
+            <ul className="equipments-list">
+                {logement.equipments.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
             </ul>
           }
         />

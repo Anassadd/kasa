@@ -1,23 +1,27 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Dropdown from "../components/Dropdown";
+import Dropdown from "./Dropdown";
 
-describe("Dropdown component", () => {
-  test("par défaut le contenu est caché", () => {
-    render(<Dropdown title="Description" content="Texte caché" />);
-
-    // Le contenu ne doit pas être visible au départ
-    const content = screen.queryByText("Texte caché");
-    expect(content).not.toBeVisible();
+describe("Dropdown", () => {
+  it("affiche le titre du dropdown", () => {
+    render(<Dropdown title="Mon titre" content="Mon contenu" />);
+    expect(screen.getByText("Mon titre")).toBeInTheDocument();
   });
 
-  test("le contenu s'affiche après clic", () => {
-    render(<Dropdown title="Description" content="Texte affiché" />);
+  it("ouvre et ferme le contenu quand on clique", () => {
+    render(<Dropdown title="Titre" content="Texte du dropdown" />);
 
-    // Clique sur le header
-    const header = screen.getByText("Description");
-    fireEvent.click(header);
+    // On cible directement la div du contenu
+    const contentDiv = screen.getByText("Texte du dropdown").closest(".dropdown-content");
 
-    // Le contenu doit être visible
-    expect(screen.getByText("Texte affiché")).toBeVisible();
+    // Au départ → fermé
+    expect(contentDiv).toHaveClass("closed");
+
+    // Clique → ouverture
+    fireEvent.click(screen.getByText("Titre"));
+    expect(contentDiv).not.toHaveClass("closed");
+
+    // Clique encore → fermeture
+    fireEvent.click(screen.getByText("Titre"));
+    expect(contentDiv).toHaveClass("closed");
   });
 });
