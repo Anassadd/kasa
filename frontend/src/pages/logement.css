@@ -92,7 +92,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: start; /* important : évite le stretch */
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .logement-dropdowns > div {
