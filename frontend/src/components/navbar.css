@@ -28,6 +28,10 @@
   text-decoration: underline;
 }
 
+.navbar-home {
+  max-width: 1431px; 
+}
+
 /* -------- Responsive -------- */
 @media (max-width: 768px) {
   .navbar {

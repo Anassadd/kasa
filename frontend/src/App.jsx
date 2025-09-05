@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar.jsx";
-import Footer from "./components/Footer";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Logement from "./pages/Logement.jsx";
-import Dropdown from "./components/Dropdown.jsx";
-import ErrorPage from "./pages/Error.jsx";
+import Footer from "./components/footer";
+import Home from "./pages/home.jsx";
+import About from "./pages/about.jsx";
+import Logement from "./pages/logement.jsx";
+import Dropdown from "./components/dropdown.jsx";
+import ErrorPage from "./pages/error.jsx";
 
 
 function App() {

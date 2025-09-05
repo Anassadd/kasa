@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Banner from "./Banner";
+import Banner from "./banner";
 
 describe("Banner", () => {
   it("affiche le titre s’il est fourni", () => {

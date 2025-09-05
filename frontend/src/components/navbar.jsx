@@ -1,10 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./navbar.css";
 import logo from "../assets/logo-kasa-red.png";
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isHome ? "navbar-home" : ""}`}>
       <div className="navbar-logo">
         <img src={logo} alt="Kasa" />
       </div>
@@ -27,3 +30,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

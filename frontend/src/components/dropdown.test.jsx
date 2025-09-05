@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Dropdown from "./Dropdown";
+import Dropdown from "./dropdown";
 
 describe("Dropdown", () => {
   it("affiche le titre du dropdown", () => {

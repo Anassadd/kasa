@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Banner from "../components/Banner";
-import Card from "../components/Card";
+import Banner from "../components/banner";
+import Card from "../components/card";
 import bannerHome from "../assets/banner-home.jpg"; 
 import "./home.css";
 

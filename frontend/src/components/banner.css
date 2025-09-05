@@ -44,10 +44,11 @@
   .banner {
     margin: 20px auto;
     border-radius: 10px;
-    width: 335px;
+    width: calc(100% - 20px);
+    max-width: none;
     height: 111px;
     justify-content: flex-start;
-    padding-left: 15px; 
+    padding-left: 15px;
   }
 
 
@@ -64,7 +65,7 @@
     font-size: clamp(16px, 5vw, 20px);
     font-weight: 600;
     text-align: left;
-    width: 52%;
+    width: 50%;
   }
 }
 

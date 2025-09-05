@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ErrorPage from "./Error";
-import Slideshow from "../components/Slideshow";
-import Dropdown from "../components/Dropdown";
+import ErrorPage from "./error";
+import Slideshow from "../components/slideshow";
+import Dropdown from "../components/dropdown";
 import "./logement.css";
 import starActive from "../assets/star-active.png";
 import starInactive from "../assets/star-inactive.png";

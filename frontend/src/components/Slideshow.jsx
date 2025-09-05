@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Slideshow.css";
-import arrow from "../assets/arrow.png"; // ta flèche unique
+import "./slideshow.css";
+import arrow from "../assets/arrow.png"; 
 
 const Slideshow = ({ pictures }) => {
   const [current, setCurrent] = useState(0);
